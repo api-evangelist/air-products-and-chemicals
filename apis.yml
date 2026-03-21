@@ -1,0 +1,7 @@
+aid: air-products-and-chemicals
+url: https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/apis.yml
+modified: '2026-03-21'
+apis: []
+common:
+  - type: Website
+    url: https://www.air-products-and-chemicals.com
