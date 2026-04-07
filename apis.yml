@@ -1,7 +1,12 @@
 aid: air-products-and-chemicals
-url: https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.air-products-and-chemicals.com
+description: >-
+  Air Products and Chemicals is a global industrial gases company that supplies atmospheric,
+  process, and specialty gases as well as related equipment and applications expertise
+  to customers in dozens of industries.
