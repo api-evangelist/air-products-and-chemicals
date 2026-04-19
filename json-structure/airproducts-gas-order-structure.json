@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/json-structure/airproducts-gas-order-structure.json",
+  "name": "GasOrder",
+  "description": "A gas supply order to Air Products",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "description": "Order identifier",
+      "example": "ORD-2024-789012"
+    },
+    "customer_id": {
+      "type": "string",
+      "description": "Customer account number",
+      "example": "CUST-10045"
+    },
+    "product_id": {
+      "type": "string",
+      "description": "Product ordered",
+      "example": "N2-BULK-001"
+    },
+    "quantity": {
+      "type": "double",
+      "description": "Quantity ordered in specified unit",
+      "example": 10000.0
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measure (SCF, kg, liters)",
+      "example": "SCF"
+    },
+    "delivery_date": {
+      "type": "string",
+      "description": "Requested delivery date",
+      "example": "2025-04-30"
+    },
+    "delivery_address": {
+      "type": "string",
+      "description": "Delivery site address",
+      "example": "123 Industrial Blvd, Allentown, PA 18105"
+    },
+    "status": {
+      "type": "string",
+      "description": "Order status",
+      "example": "Confirmed"
+    }
+  }
+}

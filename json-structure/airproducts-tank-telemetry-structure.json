@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/json-structure/airproducts-tank-telemetry-structure.json",
+  "name": "TankTelemetry",
+  "description": "IoT telemetry data from a remote gas storage tank",
+  "type": "object",
+  "properties": {
+    "tank_id": {
+      "type": "string",
+      "description": "Tank identifier",
+      "example": "TANK-PA-001"
+    },
+    "customer_id": {
+      "type": "string",
+      "description": "Customer account",
+      "example": "CUST-10045"
+    },
+    "product": {
+      "type": "string",
+      "description": "Gas product stored",
+      "example": "Liquid Nitrogen"
+    },
+    "level_percent": {
+      "type": "double",
+      "description": "Current fill level as percentage",
+      "example": 72.5
+    },
+    "pressure_bar": {
+      "type": "double",
+      "description": "Tank pressure in bar",
+      "example": 8.2
+    },
+    "temperature_c": {
+      "type": "double",
+      "description": "Tank temperature in Celsius",
+      "example": -196.0
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "Reading timestamp",
+      "example": "2025-04-19T10:30:00Z"
+    },
+    "reorder_threshold": {
+      "type": "double",
+      "description": "Level % at which reorder is triggered",
+      "example": 25.0
+    }
+  }
+}

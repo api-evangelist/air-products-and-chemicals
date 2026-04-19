@@ -1,0 +1,111 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Air Products and Chemicals"
+  description: "Taxonomy for Air Products industrial gases covering product types, ordering, and IoT tank telemetry."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: airproducts-website
+      version: "N/A"
+      baseUrl: https://www.airproducts.com
+      status: active
+      note: "Air Products does not provide a public developer API. This profile documents data schemas for industrial gas supply chain."
+
+  resources:
+    - name: IndustrialGasProduct
+      actions: [list, get, order]
+      description: "Industrial gas product with purity and safety specifications"
+    - name: GasOrder
+      actions: [create, track, cancel]
+      description: "Gas supply order for bulk or packaged delivery"
+    - name: TankTelemetry
+      actions: [read, monitor, alert]
+      description: "IoT telemetry from remote storage tanks"
+
+  actions:
+    - name: list
+      pattern: read
+      description: "List available products"
+    - name: order
+      pattern: write
+      description: "Place a gas supply order"
+    - name: track
+      pattern: read
+      description: "Track delivery status"
+    - name: monitor
+      pattern: read
+      description: "Monitor tank fill levels and pressure"
+    - name: alert
+      pattern: read
+      description: "Trigger reorder alert based on threshold"
+
+  schemas:
+    products:
+      - name: IndustrialGasProduct
+        description: "Industrial gas product specification"
+        keyFields: [product_id, name, chemical_formula, purity_grade, form]
+    orders:
+      - name: GasOrder
+        description: "Customer supply order"
+        keyFields: [order_id, customer_id, product_id, quantity, delivery_date, status]
+    telemetry:
+      - name: TankTelemetry
+        description: "Remote tank monitoring data"
+        keyFields: [tank_id, level_percent, pressure_bar, temperature_c, timestamp]
+
+  enums:
+    gasTypes:
+      - Hydrogen
+      - Nitrogen
+      - Oxygen
+      - Argon
+      - Helium
+      - Carbon Dioxide
+      - Acetylene
+      - Specialty Mixtures
+    purityGrades:
+      - Industrial Grade
+      - High Purity (HP)
+      - Ultra High Purity (UHP)
+      - Research Grade
+      - Medical Grade
+
+  authentication:
+    schemes:
+      - type: portal
+        description: "Customer portal login for online ordering"
+
+capability:
+  workflows:
+    - name: "Industrial Gas Supply Chain"
+      description: "Monitor tank levels, trigger reorders, and track deliveries for industrial gas supply"
+      personas: [Procurement Manager, Plant Engineer]
+      domains: [Industrial Supply Chain, Manufacturing]
+
+  personas:
+    - id: procurement
+      name: "Procurement Manager"
+      description: "Manages gas supply contracts, ordering, and invoicing"
+    - id: engineer
+      name: "Plant Engineer"
+      description: "Monitors gas consumption and tank levels at industrial facilities"
+
+  domains:
+    - name: "Industrial Supply Chain"
+      resources: [IndustrialGasProduct, GasOrder]
+    - name: "Facility Management"
+      resources: [TankTelemetry]
+
+crossReference:
+  - resource: IndustrialGasProduct
+    operations: [list, order]
+    personas: [Procurement Manager, Plant Engineer]
+  - resource: GasOrder
+    operations: [create, track]
+    personas: [Procurement Manager]
+  - resource: TankTelemetry
+    operations: [monitor, alert]
+    personas: [Plant Engineer]

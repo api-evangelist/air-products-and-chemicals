@@ -1,0 +1,12 @@
+{
+  "product_id": "H2-001",
+  "name": "Hydrogen (H2)",
+  "chemical_formula": "H2",
+  "purity_grade": "Ultra High Purity (UHP)",
+  "purity_percent": 99.999,
+  "form": "compressed gas",
+  "applications": [
+    "example"
+  ],
+  "safety_class": "2.1 Flammable Gas"
+}

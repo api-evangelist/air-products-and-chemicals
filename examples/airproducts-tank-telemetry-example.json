@@ -1,0 +1,10 @@
+{
+  "tank_id": "TANK-PA-001",
+  "customer_id": "CUST-10045",
+  "product": "Liquid Nitrogen",
+  "level_percent": 72.5,
+  "pressure_bar": 8.2,
+  "temperature_c": -196.0,
+  "timestamp": "2025-04-19T10:30:00Z",
+  "reorder_threshold": 25.0
+}

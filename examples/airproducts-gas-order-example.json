@@ -1,0 +1,10 @@
+{
+  "order_id": "ORD-2024-789012",
+  "customer_id": "CUST-10045",
+  "product_id": "N2-BULK-001",
+  "quantity": 10000.0,
+  "unit": "SCF",
+  "delivery_date": "2025-04-30",
+  "delivery_address": "123 Industrial Blvd, Allentown, PA 18105",
+  "status": "Confirmed"
+}

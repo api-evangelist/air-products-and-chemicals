@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "airproducts": "https://airproducts.com/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "IndustrialGasProduct": "airproducts:IndustrialGasProduct",
+    "GasOrder": "airproducts:GasOrder",
+    "TankTelemetry": "airproducts:TankTelemetry",
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "productId": {
+      "@id": "airproducts:product_id",
+      "@type": "xsd:string"
+    },
+    "chemicalFormula": {
+      "@id": "airproducts:chemical_formula",
+      "@type": "xsd:string"
+    },
+    "purityGrade": {
+      "@id": "airproducts:purity_grade",
+      "@type": "xsd:string"
+    },
+    "purityPercent": {
+      "@id": "airproducts:purity_percent",
+      "@type": "xsd:decimal"
+    },
+    "orderId": {
+      "@id": "airproducts:order_id",
+      "@type": "xsd:string"
+    },
+    "quantity": {
+      "@id": "airproducts:quantity",
+      "@type": "xsd:decimal"
+    },
+    "deliveryDate": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:date"
+    },
+    "tankId": {
+      "@id": "airproducts:tank_id",
+      "@type": "xsd:string"
+    },
+    "levelPercent": {
+      "@id": "airproducts:level_percent",
+      "@type": "xsd:decimal"
+    },
+    "timestamp": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

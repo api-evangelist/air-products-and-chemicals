@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/json-structure/airproducts-industrial-gas-product-structure.json",
+  "name": "IndustrialGasProduct",
+  "description": "An industrial gas product offered by Air Products",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "Unique product identifier",
+      "example": "H2-001"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product name",
+      "example": "Hydrogen (H2)"
+    },
+    "chemical_formula": {
+      "type": "string",
+      "description": "Chemical formula",
+      "example": "H2"
+    },
+    "purity_grade": {
+      "type": "string",
+      "description": "Purity grade classification",
+      "example": "Ultra High Purity (UHP)"
+    },
+    "purity_percent": {
+      "type": "double",
+      "description": "Purity percentage",
+      "example": 99.999
+    },
+    "form": {
+      "type": "string",
+      "description": "Physical form: gas, liquid, dissolved",
+      "example": "compressed gas"
+    },
+    "applications": {
+      "type": "array",
+      "description": "Industries and applications served",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safety_class": {
+      "type": "string",
+      "description": "DOT hazard class",
+      "example": "2.1 Flammable Gas"
+    }
+  }
+}
