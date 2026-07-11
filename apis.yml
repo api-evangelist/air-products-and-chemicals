@@ -48,6 +48,8 @@ apis:
       type: Documentation
       title: Hydrogen Solutions
 common:
+  - type: DomainSecurity
+    url: security/air-products-and-chemicals-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/air-products
   - name: Air Products Website
