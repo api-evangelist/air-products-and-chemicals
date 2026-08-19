@@ -32,7 +32,7 @@ description: Air Products and Chemicals, Inc. is a global industrial gases compa
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: air-products-and-chemicals:air-products
     name: Air Products and Chemicals
