@@ -1,0 +1,80 @@
+generated: '2026-08-30'
+method: searched
+source: https://www.airproducts.com/company/sustainability/certifications
+provider: Air Products and Chemicals
+providerId: air-products-and-chemicals
+description: >-
+  Air Products publishes no machine-readable API contract, so none of the API-layer standards below can
+  be asserted. What the company does publish, and publishes in depth, is an operational and product
+  certification register covering quality, environment, safety, energy, medical device, aviation and
+  food-safety management systems across its businesses and countries. Those are recorded here because
+  they are the compliance posture this company actually documents publicly.
+compliance_program:
+  published: true
+  url: https://www.airproducts.com/company/sustainability/certifications
+  additional_url: https://www.airproducts.com/company/sustainability/certifications/additional-capabilities-and-certifications
+  scope: operational and product management systems, published per business and per country
+  certifications:
+    - ISO 9001 (quality management, listed by country and by business)
+    - ISO 14001 (environmental management)
+    - ISO 45001 (occupational health and safety)
+    - ISO/OHSAS 18001 (occupational health and safety, legacy)
+    - ISO 50001 (energy management)
+    - ISO 13485 (medical devices)
+    - ISO/FSSC 22000 (food safety)
+    - ISO/IEC 17020 (inspection bodies)
+    - ISO/IEC 17025 (laboratory accreditation)
+    - ISO 17034 (reference material producers - San Fu Co. Ltd and Sant Celoni sites)
+    - ISO 26000 (social responsibility)
+    - AS 9100 (aviation, space and defence quality management)
+    - GMP (good manufacturing practice)
+    - Halal
+    - Food Gas Manufacturer License
+    - Cylinder Tester certification
+  other_programs:
+    - name: REACH compliance
+      url: https://www.airproducts.com/company/sustainability/reach-compliance
+    - name: SARA 312 / Tier II reporting
+      url: https://www.airproducts.com/company/sustainability/sara-312/delivery-volume-reports
+standards:
+  - id: openapi
+    conforms: false
+    evidence: no OpenAPI or Swagger document served on any Air Products host; www, api, account, apdirect and investors hosts all 404 on /openapi.json, /swagger.json, /api-docs and /v1/openapi.json
+  - id: wsdl-soap
+    conforms: unknown
+    evidence: >-
+      api.airproducts.com is a live Axway (Vordel) API Gateway answering every path with a SOAP 1.2
+      fault:MessageBlocked fault (content-type application/soap+xml). A SOAP surface therefore exists,
+      but ?wsdl and ?singleWsdl are blocked identically, so no contract could be read and none is asserted.
+  - id: graphql
+    conforms: false
+    evidence: no /graphql surface found on any host
+  - id: asyncapi
+    conforms: false
+    evidence: no event, streaming or webhook surface documented publicly
+  - id: oauth2
+    conforms: unknown
+    evidence: MyAirProducts uses a hosted login at account.airproducts.com, but /.well-known/openid-configuration and /.well-known/oauth-authorization-server both 404, so the grant model is not publicly discoverable
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: no contract to read; the gateway returns SOAP faults rather than application/problem+json
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 on every Air Products host
+  - id: a2a-agent-card
+    conforms: false
+    evidence: /.well-known/agent-card.json and /.well-known/agent.json 404 (or 403 at the investor-site WAF) on every host
+  - id: llms-txt
+    conforms: false
+    evidence: /llms.txt returns 404 on www.airproducts.com, account.airproducts.com, apdirect.airproducts.com and investors.airproducts.com
+domain_standard:
+  claimed: false
+  note: >-
+    No domain standard is asserted. The industrial-gas B2B integration standards that would apply here
+    (ANSI X12 / EDIFACT purchase-order and invoice message sets, cXML through SAP Ariba) are named only
+    as commercial onboarding options on the supplier eConnections page; no message set, schema or
+    contract is published, so there is nothing in a contract to evidence a conformance against.
+  probed:
+    - url: https://www.airproducts.com/company/suppliers/transactional-info/econnections
+      status: 200
+      finding: describes a Supplier Portal and SAP Ariba Network onboarding by email; no EDI implementation guide, message set or specification published

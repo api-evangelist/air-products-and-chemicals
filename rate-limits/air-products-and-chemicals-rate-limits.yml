@@ -24,6 +24,16 @@ sources:
 responseCodes:
   throttled: 429
   serviceUnavailable: 503
+limit_count: 0
+# 2026-08-30 enrichment pass: verified by probe that Air Products publishes NO rate-limit documentation
+# and no machine-readable contract in which limits could be declared. limit_count is an honest zero.
+evidence:
+  - url: https://www.airproducts.com/sitemap.xml
+    status: 200
+    finding: no developer, API, or rate-limit page among 1,174 published URLs
+  - url: https://api.airproducts.com/
+    status: 404
+    finding: live Axway (Vordel) gateway; returns a SOAP fault:MessageBlocked to anonymous callers and emits no RateLimit-* or X-RateLimit-* headers
 limits:
   - name: Contractual integration limits
     scope: contract

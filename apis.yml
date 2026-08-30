@@ -35,11 +35,11 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/air-products-and-chemicals.png
 access: 3rd-Party
 created: '2025-02-17'
-modified: '2026-04-19'
+modified: '2026-08-30'
 position: Consumer
 description: Air Products and Chemicals, Inc. is a global industrial gases company founded in 1940 and headquartered in Allentown, Pennsylvania. It is one of the largest producers of hydrogen and 
   helium worldwide, supplying atmospheric, process, and specialty gases including nitrogen, oxygen, argon, hydrogen, helium, and carbon dioxide, as well as related equipment and engineering services 
-  to customers in manufacturing, healthcare, technology, energy, and other industries. Air Products does not currently provide a public developer API.
+  to customers in manufacturing, healthcare, technology, energy, and other industries. Air Products does not currently provide a public developer API, developer portal, or machine-readable contract. A live Axway (Vordel) API gateway operates at api.airproducts.com but blocks every anonymous path with a SOAP MessageBlocked fault, and customer ordering and tank telemetry sit behind the MyAirProducts login; integration is provisioned bilaterally under a gas supply agreement.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
@@ -61,12 +61,12 @@ apis:
     properties:
     - url: https://www.airproducts.com/
       type: Website
-    - url: https://www.airproducts.com/products
+    - url: https://www.airproducts.com/gases
       type: Documentation
-      title: Products Catalog
-    - url: https://www.airproducts.com/solutions
+      title: Industrial Gases Catalog
+    - url: https://www.airproducts.com/company/innovation
       type: Documentation
-      title: Industry Solutions
+      title: Innovation and Solutions
     - url: https://www.airproducts.com/hydrogen
       type: Documentation
       title: Hydrogen Solutions
@@ -79,10 +79,11 @@ common:
     url: https://www.airproducts.com/
     type: Website
     description: Official Air Products and Chemicals corporate website.
-  - name: Air Products Products
-    url: https://www.airproducts.com/products
+  - name: Air Products Industrial Gases
+    url: https://www.airproducts.com/gases
     type: Documentation
-    description: Industrial, specialty, and process gas products catalog.
+    description: Industrial, specialty, and process gas products catalog. Verified live 2026-08-30 (the
+      previous /products pointer returned 404 and was removed).
   - name: Air Products Hydrogen Solutions
     url: https://www.airproducts.com/hydrogen
     type: Documentation
@@ -95,14 +96,51 @@ common:
     url: https://www.airproducts.com/company/sustainability
     type: Documentation
     description: Sustainability and ESG reporting.
-  - name: Air Products Privacy
-    url: https://www.airproducts.com/company/privacy-notice
+  - name: Air Products Privacy Notice
+    url: https://www.airproducts.com/privacy-notice
     type: PrivacyPolicy
     description: Privacy notice for Air Products digital services.
   - name: Air Products Careers
     url: https://www.airproducts.com/careers
     type: Portal
     description: Job opportunities at Air Products worldwide.
+  - name: Air Products Customer Support
+    url: https://www.airproducts.com/customer-support
+    type: Support
+    description: Customer support hub with regional contacts, ordering help, and product safety information.
+  - name: Air Products News Center
+    url: https://www.airproducts.com/company/news-center
+    type: Blog
+    description: Company news, press releases, and project announcements.
+  - name: Air Products Terms and Conditions
+    url: https://www.airproducts.com/legal-documents/air-products-terms-and-conditions
+    type: TermsOfService
+    description: General terms and conditions of sale for Air Products products and services.
+  - name: MyAirProducts Sign In
+    url: https://account.airproducts.com/login
+    type: Login
+    description: MyAirProducts customer account login for online ordering and account management. Access is
+      provisioned under a gas supply agreement; there is no self-service developer signup.
+  - name: Air Products Smart Technology
+    url: https://www.airproducts.com/services/smart-technology
+    type: Documentation
+    description: Smart Technology platform - sensor and wireless tank, process, and delivery monitoring
+      delivered as a managed service. No public API is documented for it.
+  - name: Air Products ISO Certifications
+    url: https://www.airproducts.com/company/sustainability/certifications
+    type: Compliance
+    description: Published certification register - ISO 9001 by country and by business, plus ISO 14001,
+      45001, 50001, 13485, FSSC 22000, IEC 17020/17025, ISO 17034, ISO 26000, AS 9100, GMP and Halal.
+  - type: Conformance
+    url: conformance/air-products-and-chemicals-conformance.yml
+    name: Air Products Conformance Record
+    description: Standards conformance record - published certification program plus the honest negative
+      result for every API-layer standard probed on 2026-08-30.
+  - type: LLMsTxt
+    url: llms/air-products-and-chemicals-llms.txt
+    name: Air Products llms.txt
+    description: Generated llms.txt describing what an agent can and cannot do with Air Products. Air
+      Products serves no /llms.txt of its own (404 on every host).
   - type: Features
     data:
     - name: Industrial Gas Supply
@@ -141,3 +179,30 @@ common:
       description: Electronic Data Interchange for automated purchase orders and invoicing with large industrial accounts.
     - name: IoT Sensors
       description: Remote monitoring of tank levels and gas consumption via IoT-connected sensors at customer sites.
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Air Products runs a live Axway (Vordel) API gateway at api.airproducts.com that answers every
+    anonymous path - including "/" and "?wsdl" - with an HTTP 404 SOAP fault:MessageBlocked, and the only
+    other digital surfaces (MyAirProducts ordering and Smart Technology tank telemetry) redirect to the
+    account.airproducts.com login, so the contract is reachable only by an existing contracted customer.
+  evidence:
+    - url: https://api.airproducts.com/
+      status: 404
+    - url: https://api.airproducts.com/?wsdl
+      status: 404
+    - url: https://apdirect.airproducts.com/
+      status: 200
+    - url: https://www.airproducts.com/openapi.json
+      status: 404
+    - url: https://www.airproducts.com/llms.txt
+      status: 404
+    - url: https://www.airproducts.com/.well-known/security.txt
+      status: 404
+  checked: '2026-08-30'

@@ -24,6 +24,22 @@ notes: No public API pricing. Air Products bills on industrial-gas product, equi
   not API calls.
 sources:
   - https://www.airproducts.com/
+plan_count: 0
+# 2026-08-30 enrichment pass: verified by probe that Air Products publishes NO pricing or plans page.
+# www.airproducts.com/pricing and /plans are not in the sitemap; the only commercial surface is the
+# MyAirProducts online-ordering portal, which sits behind account.airproducts.com/login (HTTP 200 login
+# wall). plan_count is 0 because nothing priced is published; the single entry below records the
+# contract SHAPE Air Products sells under, not a published rate card.
+evidence:
+  - url: https://www.airproducts.com/sitemap.xml
+    status: 200
+    finding: 1,174 URLs, none of them a pricing or plans page
+  - url: https://apdirect.airproducts.com/
+    status: 200
+    finding: redirects to https://account.airproducts.com/login - ordering and any pricing is customer-only
+  - url: https://www.airproducts.com/legal-documents/terms-and-conditions-for-myairproducts-online-ordering-current-customers
+    status: 200
+    finding: online-ordering terms confirm ordering is for existing contracted customers
 plans:
   - id: air-products-supply-contract
     name: Gas Supply / Service Contract

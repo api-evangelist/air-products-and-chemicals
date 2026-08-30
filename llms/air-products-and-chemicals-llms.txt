@@ -1,0 +1,55 @@
+# Air Products and Chemicals
+
+> Air Products and Chemicals, Inc. is a global industrial gases company founded in 1940 and headquartered in Allentown, Pennsylvania. It is one of the world's largest producers of hydrogen and helium, supplying atmospheric, process and specialty gases along with gas-generation equipment, liquefaction technology and engineering services. Air Products publishes no public developer API, no OpenAPI or other machine-readable contract, and no developer portal. Customer and supplier integration is handled through gated portals and bilateral agreements.
+
+## What an agent can and cannot do here
+
+- There is no public API, no API key, no developer signup and no documented base URL. Do not attempt to construct one.
+- api.airproducts.com resolves to a live Axway (Vordel) API Gateway. Every path, including the root, returns HTTP 404 with a SOAP 1.2 `fault:MessageBlocked` fault. It is a partner/B2B surface, not a public one, and it publishes no WSDL.
+- Customer ordering and tank telemetry live behind the MyAirProducts login at account.airproducts.com; access is provisioned as part of a gas supply agreement, not self-service.
+- Supplier purchase-order and invoice exchange is onboarded by email through a Supplier Portal or the SAP Ariba Network. No EDI implementation guide or message set is published.
+- The correct next step for an integration is the commercial contact route, not a technical one.
+
+## Company
+
+- [Air Products home](https://www.airproducts.com/): corporate site, product and industry catalog.
+- [Industrial gases](https://www.airproducts.com/gases): atmospheric, process and specialty gas products.
+- [Hydrogen](https://www.airproducts.com/gases/hydrogen): hydrogen production, storage, delivery and fueling.
+- [Innovation](https://www.airproducts.com/company/innovation): technology and solutions programs.
+- [Sustainability](https://www.airproducts.com/company/sustainability): ESG and sustainability reporting.
+- [Governance](https://www.airproducts.com/company/governance): board, code of conduct, policies and positions.
+- [News Center](https://www.airproducts.com/company/news-center): press releases and company news.
+- [Investors](https://investors.airproducts.com/): financial reports and SEC filings.
+- [Careers](https://www.airproducts.com/careers): job openings worldwide.
+
+## Digital and integration surfaces
+
+- [Smart Technology](https://www.airproducts.com/services/smart-technology): sensor and wireless monitoring platform for customer sites, delivered as a service.
+- [Tank Monitoring System](https://www.airproducts.com/services/smart-technology/tank-monitoring-system): remote tank-level telemetry; data reaches customer PLC/DCS over Ethernet or serial, with alerts by SMS and email. No public API is documented for it.
+- [Delivery Notification System](https://www.airproducts.com/services/smart-technology/delivery-notification-system): delivery event notifications.
+- [Process Monitoring and Control System](https://www.airproducts.com/services/smart-technology/process-monitoring-and-control-system): process parameter monitoring.
+- [MyAirProducts sign in](https://account.airproducts.com/login): customer ordering and account portal, login required.
+- [Supplier eConnections](https://www.airproducts.com/company/suppliers/transactional-info/econnections): electronic purchase orders and invoices via Supplier Portal or SAP Ariba Network.
+
+## Compliance and certification
+
+- [ISO certifications](https://www.airproducts.com/company/sustainability/certifications): ISO 9001 registers by country and by business.
+- [Additional capabilities and certifications](https://www.airproducts.com/company/sustainability/certifications/additional-capabilities-and-certifications): ISO 14001, 45001, 50001, 13485, FSSC 22000, IEC 17020, IEC 17025, ISO 17034, ISO 26000, AS 9100, GMP, Halal.
+- [REACH compliance](https://www.airproducts.com/company/sustainability/reach-compliance): EU chemical registration compliance.
+
+## Legal and support
+
+- [Terms and conditions](https://www.airproducts.com/legal-documents/air-products-terms-and-conditions)
+- [MyAirProducts online ordering terms](https://www.airproducts.com/legal-documents/terms-and-conditions-for-myairproducts-online-ordering-current-customers)
+- [Privacy notice](https://www.airproducts.com/privacy-notice)
+- [Customer support](https://www.airproducts.com/customer-support)
+- [Contact us](https://www.airproducts.com/contact-us)
+
+## API Evangelist profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/apis.yml): the machine-readable company profile this file was generated from.
+- [Conformance record](https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/conformance/air-products-and-chemicals-conformance.yml)
+- [.well-known probe record](https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/well-known/air-products-and-chemicals-well-known.yml)
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/security/air-products-and-chemicals-domain-security.yml)
+
+<!-- generated: 2026-08-30 | method: generated | source: apis.yml + repo artifacts + live probes of airproducts.com hosts. Air Products serves no /llms.txt of its own; www.airproducts.com/llms.txt returns 404. -->

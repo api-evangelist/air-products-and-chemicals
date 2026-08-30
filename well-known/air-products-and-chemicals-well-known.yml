@@ -1,0 +1,112 @@
+generated: '2026-08-30'
+method: probed
+source: live HTTPS probes of every Air Products host named in apis.yml plus the discovered API gateway host
+provider: Air Products and Chemicals
+providerId: air-products-and-chemicals
+hit_count: 0
+notes: >-
+  Nothing is served at any /.well-known/ path on any Air Products host. Every host answers with a
+  catch-all body (Sitecore 404 page on www, an nginx 301 on the apex, a Drupal 404 shell on investors,
+  an empty 404 on account) so no probe returned a document worth saving, and NO WellKnown or SecurityTxt
+  pointer is emitted for this provider. A soft-404 control path was probed on each host and returned the
+  same body and byte count as the real /.well-known/ paths, confirming the 404s are genuine absences and
+  not a blocked crawler.
+  The one substantive discovery on this sweep is api.airproducts.com — a live Axway (Vordel) API Gateway.
+  Every path on that host, including "/", returns HTTP 404 with content-type application/soap+xml and a
+  SOAP 1.2 fault whose subcode is fault:MessageBlocked in the http://www.vordel.com/soapfaults namespace.
+  That is a real B2B/partner integration surface operated by Air Products, but it publishes no WSDL, no
+  service listing and no discovery document to an unauthenticated caller; ?wsdl and ?singleWsdl are
+  blocked identically. It is recorded here as evidence, not registered as an API entry, because no Air
+  Products document names it as a base URL.
+hosts:
+  - host: https://www.airproducts.com
+    server: Sitecore 10.4.1
+    soft_404_control:
+      path: /.well-known/ZZ-control-404
+      status: 404
+      bytes: 49989
+      note: identical Sitecore 404 body returned for every unmatched /.well-known/ path
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://api.airproducts.com
+    server: nginx / Axway (Vordel) API Gateway
+    note: >-
+      Every path returns HTTP 404 application/soap+xml with a fault:MessageBlocked SOAP fault. The
+      gateway is live and answering; it simply refuses to describe itself to an anonymous caller.
+    soft_404_control:
+      path: /.well-known/ZZ-control-404
+      status: 404
+      bytes: 660
+      note: same 660-byte SOAP MessageBlocked fault as every other path on this host
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+  - host: https://account.airproducts.com
+    server: MyAirProducts identity / login
+    soft_404_control:
+      path: /.well-known/ZZ-control-404
+      status: 404
+      bytes: 0
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://apdirect.airproducts.com
+    server: MyAirProducts APDirect (redirects to account.airproducts.com/login)
+    soft_404_control:
+      path: /.well-known/ZZ-control-404
+      status: 404
+      bytes: 1245
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://investors.airproducts.com
+    server: Drupal (Q4 Inc investor site)
+    soft_404_control:
+      path: /.well-known/ZZ-control-404
+      status: 404
+      bytes: 577782
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 403
+        note: WAF Access Denied, not a served document
