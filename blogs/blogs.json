@@ -1,0 +1,11 @@
+{
+  "repo": "air-products-and-chemicals",
+  "feeds": [
+    {
+      "source": "https://www.airproducts.com/company/news-center",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-30T22:33:40Z"
+}
