@@ -1,7 +1,9 @@
 ---
 title: Air Products & Chemicals Inc. APD
 url: https://decarbonfuse.com/companies/air-products-chemicals-inc
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Air Products & Chemicals" press release artificial intelligence'
 position: 3
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: Air Products to Showcase Glass Industry Solutions at 86th ...
 url: https://www.stocktitan.net/news/APD/air-products-to-showcase-industrial-gas-solutions-at-the-86th-q2ley1a37ofs.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Air Products & Chemicals" press release artificial intelligence'
 position: 2
 source: serpapi-google
