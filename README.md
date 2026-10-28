@@ -1,4 +1,4 @@
-# Air Products and Chemicals (air-products-and-chemicals)
+# Air Products and Chemicals
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,112 +64,149 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Air Products and Chemicals, Inc. is a global industrial gases company founded in 1940 and headquartered in Allentown, Pennsylvania. It is one of the largest producers of hydrogen and helium worldwide, supplying atmospheric, process, and specialty gases including nitrogen, oxygen, argon, hydrogen, helium, and carbon dioxide, as well as related equipment and engineering services to customers in manufacturing, healthcare, technology, energy, and other industries. Air Products does not currently provide a public developer API.
+Air Products and Chemicals, Inc. is a global industrial gases company founded in 1940 and headquartered in Allentown, Pennsylvania. It is one of the largest producers of hydrogen and helium worldwide, supplying atmospheric, process, and specialty gases including nitrogen, oxygen, argon, hydrogen, helium, and carbon dioxide, as well as related equipment and engineering services to customers in manufacturing, healthcare, technology, energy, and other industries. Air Products does not currently provide a public developer API, developer portal, or machine-readable contract. A live Axway (Vordel) API gateway operates at api.airproducts.com but blocks every anonymous path with a SOAP MessageBlocked fault, and customer ordering and tank telemetry sit behind the MyAirProducts login; integration is provisioned bilaterally under a gas supply agreement.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/air-products-and-chemicals/refs/heads/main/apis.yml)
+**Areas:** Industrial Gases · Chemicals · Energy · Manufacturing · Hydrogen · Enterprise
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Air Products and Chemicals on APIs.io
 
-## Tags:
+Everything profiled for Air Products and Chemicals is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/air-products-and-chemicals/](https://apis.io/providers/air-products-and-chemicals/)** — or go straight to one of the APIs or properties below.
 
- - Industrial Gases, Chemicals, Energy, Manufacturing, Hydrogen, Enterprise
+### APIs (1)
 
-## Timestamps
+- [Air Products and Chemicals](https://apis.io/apis/air-products-and-chemicals/air-products/) — Air Products and Chemicals provides industrial, specialty, and process gases including hydrogen, helium, nitrogen, oxygen, argon, and carbon dioxide. The…
 
-- **Created:** 2025-02-17
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Air Products and Chemicals
-Air Products and Chemicals provides industrial, specialty, and process gases including hydrogen, helium, nitrogen, oxygen, argon, and carbon dioxide. The company also offers gas generation equipment, liquefaction technology, hydrogen fueling infrastructure, and engineering services for industrial and energy applications.
+#### JSON Schema (3)
 
-**Human URL:** [https://www.airproducts.com/](https://www.airproducts.com/)
+The data models the API reads and writes.
 
-#### Tags:
+- [GasOrder](https://apis.io/schemas/air-products-and-chemicals/airproducts-gas-order/)
+- [IndustrialGasProduct](https://apis.io/schemas/air-products-and-chemicals/airproducts-industrial-gas-product/)
+- [TankTelemetry](https://apis.io/schemas/air-products-and-chemicals/airproducts-tank-telemetry/)
 
- - Industrial Gases, Hydrogen, Helium, Nitrogen, Oxygen, Energy, Manufacturing
+#### JSON Structure (3)
 
-#### Properties
+Data models expressed in JSON Structure.
+
+- [Airproducts Gas Order Structure](https://apis.io/json-structure/air-products-and-chemicals/airproducts-gas-order-structure/)
+- [Airproducts Industrial Gas Product Structure](https://apis.io/json-structure/air-products-and-chemicals/airproducts-industrial-gas-product-structure/)
+- [Airproducts Tank Telemetry Structure](https://apis.io/json-structure/air-products-and-chemicals/airproducts-tank-telemetry-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Airproducts Context](https://apis.io/jsonld/air-products-and-chemicals/airproducts-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Airproducts Vocabulary](https://apis.io/vocabularies/air-products-and-chemicals/airproducts-vocabulary/)
+
+#### Examples (3)
+
+Example requests and responses.
+
+- [Airproducts Gas Order Example](https://apis.io/examples/air-products-and-chemicals/airproducts-gas-order-example/)
+- [Airproducts Industrial Gas Product Example](https://apis.io/examples/air-products-and-chemicals/airproducts-industrial-gas-product-example/)
+- [Airproducts Tank Telemetry Example](https://apis.io/examples/air-products-and-chemicals/airproducts-tank-telemetry-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Air Products and Chemicals — jsonschema rules](https://apis.io/rules/air-products-and-chemicals/air-products-and-chemicals-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Air Products And Chemicals Domain Security](https://apis.io/security/air-products-and-chemicals/air-products-and-chemicals-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Air Products And Chemicals Plans Pricing](https://apis.io/plans/air-products-and-chemicals/air-products-and-chemicals-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Air Products And Chemicals Rate Limits](https://apis.io/rate-limits/air-products-and-chemicals/air-products-and-chemicals-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Air Products And Chemicals Finops](https://apis.io/finops/air-products-and-chemicals/air-products-and-chemicals-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.airproducts.com/)
-- [Products Catalog](https://www.airproducts.com/products)
-- [Industry Solutions](https://www.airproducts.com/solutions)
-- [Hydrogen Solutions](https://www.airproducts.com/hydrogen)
+- [Documentation](https://www.airproducts.com/gases)
+- [Support](https://www.airproducts.com/customer-support)
+- [Blog](https://www.airproducts.com/company/news-center)
+- [Compliance](https://www.airproducts.com/company/sustainability/certifications)
+- [Terms of service](https://www.airproducts.com/legal-documents/air-products-terms-and-conditions)
+- [Privacy policy](https://www.airproducts.com/privacy-notice)
 
-## Common Properties
+## API Evangelist rating
 
-- [Air Products Website](https://www.airproducts.com/)
-- [Air Products Products](https://www.airproducts.com/products)
-- [Air Products Hydrogen Solutions](https://www.airproducts.com/hydrogen)
-- [Air Products Investor Relations](https://investors.airproducts.com/)
-- [Air Products Sustainability](https://www.airproducts.com/company/sustainability)
-- [Air Products Privacy](https://www.airproducts.com/company/privacy-notice)
-- [Air Products Careers](https://www.airproducts.com/careers)
+**Kin Score 26.7** — thin · rubric 0.24.0 · scored 2026-10-17
 
-## Features
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 10.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 47.4 |
 
-| Name | Description |
-|------|-------------|
-| Industrial Gas Supply | Bulk and packaged supply of atmospheric gases (N2, O2, Ar), process gases, and specialty gases to industrial customers. |
-| Hydrogen Production and Supply | World-scale hydrogen production via steam methane reforming, electrolysis, and other methods for industrial and clean energy applications. |
-| Helium Supply Chain | One of the world's largest helium suppliers with global distribution network for industrial, medical, and scientific users. |
-| Gas Generation Equipment | On-site gas generation systems including nitrogen generators, hydrogen generators, and oxygen generators. |
-| Liquefied Gas Technology | Air separation units and liquefaction plants for nitrogen, oxygen, argon, and other cryogenic gases. |
-| Hydrogen Fueling Infrastructure | Hydrogen fueling stations and distribution infrastructure for fuel cell vehicles and industrial hydrogen use. |
-| Industrial Engineering Services | Engineering, design, and project management for industrial gas infrastructure and chemical plants. |
+**Agent readiness 0.6** — human-only
 
-## Use Cases
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Semiconductor Manufacturing | Ultra-high-purity nitrogen, hydrogen, and specialty gases for semiconductor fab processes. |
-| Healthcare and Medical Gases | Medical oxygen, nitrous oxide, nitrogen, and helium for hospitals and medical applications. |
-| Metal Manufacturing | Nitrogen and argon for heat treatment, welding, and steel production atmosphere control. |
-| Clean Hydrogen Energy | Green and blue hydrogen production for zero-emission industrial processes and transportation fuel. |
-| Food and Beverage | Food-grade CO2, nitrogen, and cryogenic freezing solutions for food processing and preservation. |
-| Chemical Processing | Process gases and hydrogen for petrochemical refining and chemical synthesis applications. |
+**Regulatory alignment 19.7** — Energy & Utilities
 
-## Integrations
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/air-products-and-chemicals/](https://apis.io/providers/air-products-and-chemicals/).
 
-| Name | Description |
-|------|-------------|
-| SAP | SAP ERP integration for order management and supply chain operations with industrial customers. |
-| EDI | Electronic Data Interchange for automated purchase orders and invoicing with large industrial accounts. |
-| IoT Sensors | Remote monitoring of tank levels and gas consumption via IoT-connected sensors at customer sites. |
+## How this profile is made
 
-## Artifacts
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-Machine-readable schema specifications organized by format.
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Air Products and Chemicals: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-- [airproducts-gas-order-schema.json](json-schema/airproducts-gas-order-schema.json)
-- [airproducts-industrial-gas-product-schema.json](json-schema/airproducts-industrial-gas-product-schema.json)
-- [airproducts-tank-telemetry-schema.json](json-schema/airproducts-tank-telemetry-schema.json)
-
-### JSON Structure
-
-- [airproducts-gas-order-structure.json](json-structure/airproducts-gas-order-structure.json)
-- [airproducts-industrial-gas-product-structure.json](json-structure/airproducts-industrial-gas-product-structure.json)
-- [airproducts-tank-telemetry-structure.json](json-structure/airproducts-tank-telemetry-structure.json)
-
-### JSON-LD
-
-- [airproducts-context.jsonld](json-ld/airproducts-context.jsonld)
-
-### Examples
-
-- [airproducts-gas-order-example.json](examples/airproducts-gas-order-example.json)
-- [airproducts-industrial-gas-product-example.json](examples/airproducts-industrial-gas-product-example.json)
-- [airproducts-tank-telemetry-example.json](examples/airproducts-tank-telemetry-example.json)
-
-## Vocabulary
-
-- [Air Products Vocabulary](vocabulary/airproducts-vocabulary.yaml) — Taxonomy mapping 3 resources, 5 actions, and 2 personas across industrial gas supply chain domains
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/air-products-and-chemicals/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
