@@ -1,0 +1,84 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Air Products and Chemicals
+providerId: air-products-and-chemicals
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Industrial Gases
+  - Chemicals
+  - Energy
+  - Manufacturing
+  - Hydrogen
+description: Air Products is a global industrial-gas and process-technology supplier (hydrogen, oxygen,
+  nitrogen, helium, LNG technology, gasification). It does not publish a public developer or API rate
+  card; product is sold under long-term gas-supply, on-site, or merchant-tank contracts. Customer
+  digital integrations (e.g., MyAirProducts portal, telemetry on customer-site tanks, scheduling) are
+  provisioned as part of those supply agreements.
+notes: No public API pricing. Air Products bills on industrial-gas product, equipment, and service —
+  not API calls.
+sources:
+  - https://www.airproducts.com/
+plan_count: 0
+# 2026-08-30 enrichment pass: verified by probe that Air Products publishes NO pricing or plans page.
+# www.airproducts.com/pricing and /plans are not in the sitemap; the only commercial surface is the
+# MyAirProducts online-ordering portal, which sits behind account.airproducts.com/login (HTTP 200 login
+# wall). plan_count is 0 because nothing priced is published; the single entry below records the
+# contract SHAPE Air Products sells under, not a published rate card.
+evidence:
+  - url: https://www.airproducts.com/sitemap.xml
+    status: 200
+    finding: 1,174 URLs, none of them a pricing or plans page
+  - url: https://apdirect.airproducts.com/
+    status: 200
+    finding: redirects to https://account.airproducts.com/login - ordering and any pricing is customer-only
+  - url: https://www.airproducts.com/legal-documents/terms-and-conditions-for-myairproducts-online-ordering-current-customers
+    status: 200
+    finding: online-ordering terms confirm ordering is for existing contracted customers
+plans:
+  - id: air-products-supply-contract
+    name: Gas Supply / Service Contract
+    type: enterprise
+    description: Industrial-gas supply agreement (bulk, packaged, on-site / pipeline). Digital and
+      telemetry access is included in the contract; pricing is on the gas product, equipment rental,
+      and services rather than API consumption.
+    entries:
+      - label: Supply contract
+        name: supply_contract
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: contact Air Products
+        userMultiplied: false
+    elements:
+      - name: Gas product (hydrogen, oxygen, nitrogen, helium, argon, etc.)
+      - name: Tank / on-site equipment
+      - name: Customer telemetry and tank monitoring
+      - name: MyAirProducts customer portal
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: Gas Supply / Service Contract
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - month
